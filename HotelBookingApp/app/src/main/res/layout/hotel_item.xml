@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/hotelImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/hotelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otel Adı"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hotelCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Şehir, İlçe" />
+
+    <TextView
+        android:id="@+id/hotelPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiyat: ₺100"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hotelRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating: 4.5" />
+</LinearLayout>

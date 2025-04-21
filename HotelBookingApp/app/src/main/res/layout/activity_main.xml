@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#C0D3E3">
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otel Rezervasyonu"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <!-- Giriş ve Çıkış Tarihi Alanı -->
+    <LinearLayout
+        android:id="@+id/dateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <!-- Giriş Tarihi -->
+        <EditText
+            android:id="@+id/entryDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Giriş Tarihi"
+            android:focusable="false"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Çıkış Tarihi -->
+        <EditText
+            android:id="@+id/exitDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Çıkış Tarihi"
+            android:focusable="false"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Kişi Sayısı -->
+    <EditText
+        android:id="@+id/personCount"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="Kişi Sayısı"
+        android:inputType="number"
+        android:layout_below="@id/dateContainer"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"/>
+
+    <!-- Search Button -->
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ara"
+        android:layout_below="@id/personCount"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Otel Listeleme RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hotelRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchButton"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
